@@ -18,15 +18,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
 $postData = file_get_contents("php://input");
 
 if(isset($postData)) {
-    $arr_books = [];
+    $arr_post = [];
     $request = json_decode($postData);
     $data = new stdClass();
     $title = $request->title;
+    $content = $request->content;
     $title = $_POST['title'];
+    $content = $_POST['content'];
     $message = "";
     if($title == "Titel") {
         $message = "Title cant have the value Titel... POST request worked";
     }
+    $postJson = array();
     $json = new stdClass();
     $json->message = $message;
     $json->title = $title;
