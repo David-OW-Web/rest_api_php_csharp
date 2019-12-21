@@ -1,0 +1,8 @@
+C:\xampp\htdocs\rest_api_php_csharp\REST_API\REST_API\bin\Debug\REST_API.dll
+C:\xampp\htdocs\rest_api_php_csharp\REST_API\REST_API\bin\Debug\REST_API.pdb
+C:\xampp\htdocs\rest_api_php_csharp\REST_API\REST_API\bin\Debug\Newtonsoft.Json.dll
+C:\xampp\htdocs\rest_api_php_csharp\REST_API\REST_API\bin\Debug\Newtonsoft.Json.xml
+C:\xampp\htdocs\rest_api_php_csharp\REST_API\REST_API\obj\Debug\REST_API.csprojAssemblyReference.cache
+C:\xampp\htdocs\rest_api_php_csharp\REST_API\REST_API\obj\Debug\REST_API.csproj.CopyComplete
+C:\xampp\htdocs\rest_api_php_csharp\REST_API\REST_API\obj\Debug\REST_API.dll
+C:\xampp\htdocs\rest_api_php_csharp\REST_API\REST_API\obj\Debug\REST_API.pdb
