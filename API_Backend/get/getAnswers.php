@@ -24,7 +24,9 @@ $postData = file_get_contents("php://input");
 if(isset($postData)) {
     $arr_answers = [];
     $pdo = new PDO("mysql:host=localhost;dbname=forum", "root", "");
-    $stmt = $pdo->prepare("SELECT answer_id, fk_question_id , answer_content, answer.created_at AS 'create_date', question.question_title, forum_user.username AS 'username' FROM answer INNER JOIN question ON answer.fk_question_id=question.question_id INNER JOIN forum_user ON answer.fk_user_id=forum_user.user_id");
+    $id = $_GET['id'];
+    $stmt = $pdo->prepare("SELECT answer_id, fk_question_id , answer_content, answer.created_at AS 'create_date', question.question_title, forum_user.username AS 'username' FROM answer INNER JOIN question ON answer.fk_question_id=question.question_id INNER JOIN forum_user ON answer.fk_user_id=forum_user.user_id WHERE fk_question_id=:id");
+    $stmt->bindParam(":id", $id);
     $stmt->execute();
     foreach($stmt->fetchAll() as $answer) {
         $answer_json = new stdClass();

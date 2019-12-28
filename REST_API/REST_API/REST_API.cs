@@ -26,6 +26,21 @@ namespace REST_API
             }
             return null;
         }
+
+        public Answers getAnswers(int id)
+        {
+            var request = createWebRequest(api_url + "get/getAnswers.PHP?id=" + id);
+            var response = request.GetResponse();
+            var responseStream = response.GetResponseStream();
+
+            if (responseStream != null)
+            {
+                var message = new StreamReader(responseStream).ReadToEnd();
+                var answers = JsonConvert.DeserializeObject<Answers>(message);
+                return answers;
+            }
+            return null;
+        }
         // WebRequest
         private static WebRequest createWebRequest(string url)
         {

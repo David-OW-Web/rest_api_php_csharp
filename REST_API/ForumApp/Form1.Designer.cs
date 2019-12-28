@@ -38,6 +38,10 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.answersListView = new System.Windows.Forms.ListView();
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.SuspendLayout();
@@ -54,6 +58,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.answersListView);
             this.tabPage1.Controls.Add(this.questionListView);
             this.tabPage1.Controls.Add(this.questionsListBox);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
@@ -125,6 +130,36 @@
             this.columnHeader5.Text = "Status";
             this.columnHeader5.Width = 100;
             // 
+            // answersListView
+            // 
+            this.answersListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader6,
+            this.columnHeader7,
+            this.columnHeader8});
+            this.answersListView.HideSelection = false;
+            this.answersListView.Location = new System.Drawing.Point(246, 237);
+            this.answersListView.Name = "answersListView";
+            this.answersListView.Size = new System.Drawing.Size(1202, 350);
+            this.answersListView.TabIndex = 2;
+            this.answersListView.UseCompatibleStateImageBehavior = false;
+            this.answersListView.View = System.Windows.Forms.View.Details;
+            this.answersListView.Visible = false;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Content";
+            this.columnHeader6.Width = 200;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Create Date";
+            this.columnHeader7.Width = 200;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Answer from";
+            this.columnHeader8.Width = 200;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -151,6 +186,10 @@
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ListView answersListView;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
     }
 }
 

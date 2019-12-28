@@ -35,6 +35,7 @@ namespace ForumApp
         private void questionsListBox_DoubleClick(object sender, EventArgs e)
         {
             questionListView.Items.Clear();
+            answersListView.Items.Clear();
             var questionTitle = Convert.ToString(questionsListBox.SelectedItem);
             var questions = API.getQuestions().QuestionList;
             for(int i = 0; i < questions.Count; i++)
@@ -45,6 +46,14 @@ namespace ForumApp
                     string[] content = { questions[i].content, questions[i].created_at.ToString(), questions[i].category, questions[i].username, questions[i].status };
                     ListViewItem lvi = new ListViewItem(content);
                     questionListView.Items.Add(lvi);
+                    var answers = API.getAnswers(questions[i].id).AnswerList;
+                    foreach(var c in answers)
+                    {
+                        answersListView.Visible = true;
+                        string[] content2 = { c.content, c.created_at.ToString(), c.username };
+                        ListViewItem lvi2 = new ListViewItem(content2);
+                        answersListView.Items.Add(lvi2);
+                    }
                 }
             }
         }
